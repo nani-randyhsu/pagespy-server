@@ -1,0 +1,11 @@
+{
+  "name": "pagespy-server",
+  "private": true,
+  "description": "PageSpy 遠端除錯 server，部署於 Render",
+  "scripts": {
+    "start": "printf '{\"port\":\"%s\"}' \"${PORT:-6752}\" > config.json && page-spy-api"
+  },
+  "dependencies": {
+    "@huolala-tech/page-spy-api": "2.4.10"
+  }
+}

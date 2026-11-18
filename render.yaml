@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: pagespy-server
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeployTrigger: commit
+    healthCheckPath: /
+    envVars:
+      - key: AUTH_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true

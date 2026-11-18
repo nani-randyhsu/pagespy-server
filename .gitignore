@@ -1,0 +1,6 @@
+node_modules/
+# 啟動時產生，設了 AUTH_PASSWORD 後 server 會把密碼寫進來
+config.json
+# 離線 log 的 SQLite 與檔案
+data/
+log/
